@@ -125,16 +125,17 @@ main > section {
     main{
         width: 100%; 
         display: block;
-        height: 100%
+        height: 100%;
     }
     #image {
-        height: 30%;
+        height: 40%;
         border-radius: 10px 10px 0px 0px;
         background-position: center;
     }
     
     #description {
-        height: 40%;
+        height: 50%;
+        border-radius: 0 0 10px 10px;
     }
     #description  .description-inner {
         padding: 20px
@@ -145,9 +146,7 @@ main > section {
     .description-inner .heading {
         max-width: 100%;
     }
-    .description-inner .heading h1{
-        margin: 10px 0px
-    }
+    
     .description-inner .price p{
         padding-bottom: 10px;
     }
