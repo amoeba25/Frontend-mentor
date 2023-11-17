@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+  /* primary colours */
+  --clr-primary-red : hsl(0, 100%, 74%);
+  --clr-primary-green : hsl(154, 59%, 51%);
+
+  /* accdent colours */
+  --clr-accent-blue : hsl(248, 32%, 49%);
+
+  /* neutral colours */
+  --clr-secondary-blue : hsl(249, 10%, 26%) ;
+  --clr-secondary-grey : hsl(246, 25%, 77%);
+
+  /* base fonts */
+  --fs-base : 16px;
+
+  /* font family */
+  --ff-poppins : 'Poppins', sans-serif;
+
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--ff-poppins);
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('assets/images/bg-intro-desktop.png');
+  background-color: var(--clr-primary-red);
+}
+
+.inner {
+  width: 90%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* heading styles */
+.inner > .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: flex-end; */
+}
+
+.heading> * {
+  width: 450px;
+  text-align: left;
+  color: #fff;
+  padding-left: 120px;
+}
+.heading h1 {
+  font-size: 2.5em;
+  line-height: 50px;
+}
+.heading p {
+  width: 500px;
+}
+
+/* form styles */
+.form-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.trial-banner {
+  background-color: var(--clr-accent-blue);
+  width: 450px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 0.8em;
+  text-align: center;
+  color: #fff;
+  font-weight: 100;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 7px 2px 0px;
+}
+.form {
+  background-color: #fff;
+  height: auto;
+  width: 450px;
+  box-sizing: border-box;
+  padding: 1.8em 1em;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 7px 2px 0px;
+}
+.form > form {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.form div {
+  padding: 10px;
+}
+.form input, button {
+  width: 95%;
+  padding: 1em 5px 1em 15px;
+}
+.form button {
+  background-color: var(--clr-primary-green);
+  border-style: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 0.8em;
+  width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 3px 0px -2px, rgba(0, 0, 0, 0.3) 0px 3px 4px -3px;
+
+
+}
+.form button:hover {
+  cursor: pointer;
+  background-color: hsla(154, 59%, 51%, 0.8);
+}
+.form div>.error-msg {
+  display: block;
+  font-size: 0.6em;
+  color: var(--clr-primary-red);
+  text-align: right;
+  margin: 5px 0;
+  font-weight: 600;
+}
+.form:nth-child(4) {
+  height: auto;
+}
+.form p {
+  font-size: 0.6em;
+  margin: 10px 0 0 0;
+  text-align: center;
+  color: var(--clr-secondary-grey);
+}
+.form p a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--clr-primary-red);
+}
