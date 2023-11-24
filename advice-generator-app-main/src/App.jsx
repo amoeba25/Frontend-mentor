@@ -37,7 +37,7 @@ function App() {
         ): 
       <h2 className='text-white text-[1.75em] px-6 pb-6 pt-4 text-center'>Loading...</h2>} 
       <img src="images/pattern-divider-desktop.svg" alt="divider" />
-      <button onClick={changeQuote} className='absolute p-4 bg-neonGreen rounded-full -bottom-8'>
+      <button onClick={changeQuote} className='absolute p-4 bg-neonGreen rounded-full -bottom-8 hover:shadow-[0_2px_15px_2px] hover:shadow-neonGreen'>
         <img src="images/icon-dice.svg" alt="" />
       </button>
       </div>
