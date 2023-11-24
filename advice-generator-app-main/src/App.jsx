@@ -36,9 +36,9 @@ function App() {
           </>
         ): 
       <h2>Loading...</h2>} 
-      <img src="src/assets/images/pattern-divider-desktop.svg" alt="divider" />
+      <img src="public/images/pattern-divider-desktop.svg" alt="divider" />
       <button onClick={changeQuote} className='absolute p-4 bg-neonGreen rounded-full -bottom-8'>
-        <img src="src/assets/images/icon-dice.svg" alt="" />
+        <img src="public/images/icon-dice.svg" alt="" />
       </button>
       </div>
 
