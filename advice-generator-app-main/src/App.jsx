@@ -35,10 +35,10 @@ function App() {
           <h2 className='text-white text-[1.75em] px-6 pb-6 pt-4 text-center'> {JSON.stringify(quote.advice)} </h2>
           </>
         ): 
-      <h2>Loading...</h2>} 
-      <img src="public/images/pattern-divider-desktop.svg" alt="divider" />
+      <h2 className='text-white text-[1.75em] px-6 pb-6 pt-4 text-center'>Loading...</h2>} 
+      <img src="images/pattern-divider-desktop.svg" alt="divider" />
       <button onClick={changeQuote} className='absolute p-4 bg-neonGreen rounded-full -bottom-8'>
-        <img src="public/images/icon-dice.svg" alt="" />
+        <img src="images/icon-dice.svg" alt="" />
       </button>
       </div>
 
