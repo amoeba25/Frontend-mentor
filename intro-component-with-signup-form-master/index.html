@@ -1,13 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intro component with sign up form</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              "mobile-background": "url('./images/bg-intro-mobile.png')",
+            }, 
+            colors: {
+              "primary-red": "#ff7a7a",
+              "primary-green": "#38cc8c",
+              "accent-blue": "#6055a5",
+              "neutral-dark-blue": "#3e3c49",
+              "grayish-blue": "#b9b6d3", 
+              "grey": "#d1d7e0",
+              "dark-grey": "#646870"
+            },
+            fontFamily: {
+              poppins : ["Poppins", "sans-serif"]
+            }, 
+            screens: {
+              "sm": "520px",
+            }
+          },
+        },
+      }
+  </script>
+</head>
+<body class="bg-mobile-background bg-primary-red font-poppins">
+  <div class="hero-text pt-20 pb-6 px-10 text-center">
+    <h1 class="text-white text-2xl font-semibold"> Learn to code by watching others</h1> </strong>
+  </div>
+  <div class="description">
+    <p class="text-white px-10 pt-2 pb-10 text-center"> See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+      but understanding how developers think is invaluable. 
+    </p>
+  </div>
+  <div class="banner bg-accent-blue mx-10 mb-6 py-4 text-center text-white text-sm rounded-md shadow-[rgba(0,_0,_0,_0.24)_2px_3px_6px]">
+    <p><span class="font-semibold">Try it for free 7 days</span> then</p>
+    <p>$20/mo. thereafter</p> 
+  </div>
+  <div class="form bg-white px-4 py-6 text-center mx-10 rounded-md shadow-[rgba(0,_0,_0,_0.24)_2px_3px_6px]">
+    <form action="#" method="post">
+    <input type="text" id="first-name" placeholder="First Name" class="border-2 border-grey py-3 px-3 w-[16.5rem] ml-2 mr-4 mb-4 rounded-md placeholder:text-dark-grey placeholder:font-semibold placeholder:text-sm" required>
+    <input type="text" id="first-name" placeholder="Last Name" class="border-2 border-grey py-3 px-3 w-[16.5rem] ml-2 mr-4 mb-4 rounded-md placeholder:text-dark-grey placeholder:font-semibold placeholder:text-sm" required>
+    <input type="email" id="first-name" placeholder="Email Address" class="border-2 border-grey py-3 px-3 w-[16.5rem] ml-2 mr-4 mb-4 rounded-md placeholder:text-dark-grey placeholder:font-semibold placeholder:text-sm" required>
+    <input type="password" id="first-name" placeholder="Password" class="border-2 border-grey py-3 px-3 w-[16.5rem] ml-2 mr-4 mb-4 rounded-md placeholder:text-dark-grey placeholder:font-semibold placeholder:text-sm" required>
+    
+    <button type="submit" class="bg-primary-green py-4 px-14 mb-4 rounded-md text-white uppercase text-sm shadow-[rgba(0,_0,_0,_0.24)_2px_3px_6px] hover:pointer">Claim your free trial</button>
+  </form>
+  <footer class="px-4"> <p class="text-[0.7rem] text-dark-grey">By clicking the button, you are agreeing to our <a href="#"> <span class="font-semibold text-red-600 hover:pointer"> Terms and Services </span> </a>  </p></footer>
+  </div>
+</body>
+
 </html>

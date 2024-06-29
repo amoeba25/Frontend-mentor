@@ -10,7 +10,7 @@ const Display = ({inputStates, resetValues}) => {
   const totalPerPerson = totalAmount/totalPeople;
 
   return (
-    <div className='display'>
+    <div className='display w-1/2'>
 
     <div>
       <p>tip per person</p>
