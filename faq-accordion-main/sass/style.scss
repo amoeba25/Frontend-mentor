@@ -1,0 +1,203 @@
+@use "./variables" as *;
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("assets/fonts/static/WorkSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("assets/fonts/static/WorkSans-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("assets/fonts/static/WorkSans-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+// CSS-Resets
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+// 2. Remove default margin
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  // 3. Add accessible line-height
+  line-height: 1.5;
+  // 4. Improve text rendering
+  -webkit-font-smoothing: antialiased;
+}
+
+// 5. Improve media defaults
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+// 6. Inherit fonts for form controls
+input, button, textarea, select {
+  font: inherit;
+}
+
+// 7. Avoid text overflows
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  font-family: $font-primary;
+}
+
+// 8. Improve line wrapping
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+  
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; // Adapts better on mobile browsers
+  height: 100%;      // Ensures compatibility in older browsers
+  overflow: auto;
+  font-family: $font-primary;
+  background-color: $light-pink;
+}
+
+.background-svg-desktop, .background-svg-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.background-svg-mobile{
+  display: none;
+}
+
+main{
+  width: 550px;
+  margin: auto;
+  background-color: $white;
+  z-index: 1;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  position: relative;
+
+  h1{
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1rem 0;
+  }
+  h1::before {
+    content: '';
+    background: url("/assets/images/icon-star.svg");
+    background-size: contain;
+    display: inline-block;
+    width: 0.8em; /* Set width to scale relative to text size */
+    height: 0.8em; /* Keep the icon square */
+  }
+
+  input{
+    display: none;
+  }
+
+  label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: $dark-purple;
+    font-weight: 700;
+  }
+
+  label:hover{
+    color: $bright-purple;
+  }
+
+  label:not(:last-child) {
+    padding: 1.5rem 0;
+  }
+
+  label::after {
+    content: '';
+    background: url("/assets/images/icon-plus.svg") no-repeat center/contain;
+    display: inline-block;
+    width: 1.75em;
+    height: 1.75em;
+    flex-shrink: 0; /* Prevent flexbox from adjusting its width */
+  }
+
+  input + label + .content {
+    display: none;
+  }
+
+  input:checked + label::after {
+    content: '';
+    background: url("/assets/images/icon-minus.svg") no-repeat center/contain;
+    display: inline-block;
+    width: 1.75em;
+    height: 1.75em;
+  }
+
+  input:checked + label + .content {
+    display: block;
+  }
+
+}
+
+.accordion-box:not(:last-child) {
+  border-bottom: 1px rgba($color: #f0f0f0, $alpha: 1.0) solid;
+}
+
+.content {
+  padding-bottom: 1.25rem;
+  p{
+    color: $grayish-purple;
+    font-weight: 600;
+  }
+}
+
+/* Mobile styles*/
+@media screen and (max-width: 400px) {
+  .background-svg-mobile{
+    display: block;
+  }
+  .background-svg-desktop{
+    display: none;
+  }
+    main {
+
+      width: 350px;
+      padding: 1rem;
+      border-radius: 10px;
+
+      h1{
+        padding: 0;
+        font-size: 2em;
+      }
+      label {
+        gap: 2rem;
+      }
+      
+      label::after {
+        width: 2em;
+        height: 2em;
+      }
+    }
+    
+}

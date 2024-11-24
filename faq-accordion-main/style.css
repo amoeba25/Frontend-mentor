@@ -1,0 +1,178 @@
+@font-face {
+  font-family: "Work Sans";
+  src: url("assets/fonts/static/WorkSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("assets/fonts/static/WorkSans-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("assets/fonts/static/WorkSans-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  font-family: "Work Sans", sans-serif;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  overflow: auto;
+  font-family: "Work Sans", sans-serif;
+  background-color: hsl(275, 100%, 97%);
+}
+
+.background-svg-desktop, .background-svg-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.background-svg-mobile {
+  display: none;
+}
+
+main {
+  width: 550px;
+  margin: auto;
+  background-color: hsl(0, 0%, 100%);
+  z-index: 1;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  position: relative;
+}
+main h1 {
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1rem 0;
+}
+main h1::before {
+  content: "";
+  background: url("/assets/images/icon-star.svg");
+  background-size: contain;
+  display: inline-block;
+  width: 0.8em; /* Set width to scale relative to text size */
+  height: 0.8em; /* Keep the icon square */
+}
+main input {
+  display: none;
+}
+main label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: hsl(292, 42%, 14%);
+  font-weight: 700;
+}
+main label:hover {
+  color: hsl(281, 83%, 54%);
+}
+main label:not(:last-child) {
+  padding: 1.5rem 0;
+}
+main label::after {
+  content: "";
+  background: url("/assets/images/icon-plus.svg") no-repeat center/contain;
+  display: inline-block;
+  width: 1.75em;
+  height: 1.75em;
+  flex-shrink: 0; /* Prevent flexbox from adjusting its width */
+}
+main input + label + .content {
+  display: none;
+}
+main input:checked + label::after {
+  content: "";
+  background: url("/assets/images/icon-minus.svg") no-repeat center/contain;
+  display: inline-block;
+  width: 1.75em;
+  height: 1.75em;
+}
+main input:checked + label + .content {
+  display: block;
+}
+
+.accordion-box:not(:last-child) {
+  border-bottom: 1px #f0f0f0 solid;
+}
+
+.content {
+  padding-bottom: 1.25rem;
+}
+.content p {
+  color: hsl(292, 16%, 49%);
+  font-weight: 600;
+}
+
+/* Mobile styles*/
+@media screen and (max-width: 400px) {
+  .background-svg-mobile {
+    display: block;
+  }
+  .background-svg-desktop {
+    display: none;
+  }
+  main {
+    width: 350px;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  main h1 {
+    padding: 0;
+    font-size: 2em;
+  }
+  main label {
+    gap: 2rem;
+  }
+  main label::after {
+    width: 2em;
+    height: 2em;
+  }
+}/*# sourceMappingURL=style.css.map */
