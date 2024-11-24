@@ -94,7 +94,7 @@ main h1 {
 }
 main h1::before {
   content: "";
-  background: url("/assets/images/icon-star.svg");
+  background: url("assets/images/icon-star.svg");
   background-size: contain;
   display: inline-block;
   width: 0.8em; /* Set width to scale relative to text size */
@@ -119,7 +119,7 @@ main label:not(:last-child) {
 }
 main label::after {
   content: "";
-  background: url("/assets/images/icon-plus.svg") no-repeat center/contain;
+  background: url("assets/images/icon-plus.svg") no-repeat center/contain;
   display: inline-block;
   width: 1.75em;
   height: 1.75em;
@@ -130,7 +130,7 @@ main input + label + .content {
 }
 main input:checked + label::after {
   content: "";
-  background: url("/assets/images/icon-minus.svg") no-repeat center/contain;
+  background: url("assets/images/icon-minus.svg") no-repeat center/contain;
   display: inline-block;
   width: 1.75em;
   height: 1.75em;
