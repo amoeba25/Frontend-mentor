@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap");
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("assets/fonts/Inter_18pt-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("assets/fonts/Inter_18pt-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lexend Deca", sans-serif;
+  src: url("assets/fonts/LexendDeca-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  height: 60vh;
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  background: hsl(244, 38%, 16%);
+  border-radius: 10px 0px 0 10px;
+  overflow: hidden;
+  color: hsl(0, 0%, 100%);
+  padding: 5rem 6rem 4rem 5.5rem;
+  text-align: left;
+  min-width: 300px; /* Prevent shrinking too much */
+}
+.content h1 {
+  font-size: 2.5em;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+.content p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1em;
+  padding-right: 2rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+
+.stat-container {
+  display: flex;
+}
+.stat-container p {
+  display: inline-block;
+  margin: 0;
+}
+.stat-container .stat:not(:last-child) {
+  margin-right: 3rem; /* Adjust the margin as needed */
+}
+.stat-container .stat-value {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5em;
+}
+.stat-container .stat-text {
+  color: hsla(0, 0%, 100%, 0.6);
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+
+.image {
+  flex: 1;
+  background: url("assets/images/image-header-desktop.jpg") no-repeat;
+  background-size: cover;
+  border-radius: 0 10px 10px 0;
+  overflow: hidden;
+  min-width: 600px; /* Prevent shrinking too much */
+  min-height: 10em;
+}
+.image .overlay {
+  background: hsla(280, 100%, 50%, 0.418);
+  height: 100%;
+}
+.image .overlay-2 {
+  background: hsla(293, 40%, 33%, 0.24);
+  height: 100%;
+  mix-blend-mode: color-burn;
+}
+
+/* Mobile styles*/
+@media screen and (max-width: 625px) {
+  body {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  main {
+    flex-direction: column-reverse;
+    height: auto;
+    min-width: 200px;
+    margin: 10px;
+    max-width: 80%;
+  }
+  .content, .image {
+    border-radius: unset;
+    min-width: unset;
+  }
+  .image {
+    background: url("assets/images/image-header-mobile.jpg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 220px; /* Explicitly control height */
+    overflow: hidden; /* Prevent internal content from increasing height */
+  }
+  .content {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

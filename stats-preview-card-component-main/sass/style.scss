@@ -1,0 +1,187 @@
+@use "./variables" as *;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+@font-face {
+    font-family: "Inter", sans-serif;
+    src: url("assets/fonts/Inter_18pt-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Inter", sans-serif;
+    src: url("assets/fonts/Inter_18pt-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Lexend Deca", sans-serif;
+    src: url("assets/fonts/LexendDeca-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+// CSS-Resets
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+// 2. Remove default margin
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  // 3. Add accessible line-height
+  line-height: 1.5;
+  // 4. Improve text rendering
+  -webkit-font-smoothing: antialiased;
+}
+
+// 5. Improve media defaults
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+// 6. Inherit fonts for form controls
+input, button, textarea, select {
+  font: inherit;
+}
+
+// 7. Avoid text overflows
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+// 8. Improve line wrapping
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+body {
+  background-color: $very-dark-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: $font-primary;
+
+}
+
+main {
+  height: 60vh;
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  background: $dark-desaturated-blue;
+  border-radius: 10px 0px 0 10px;
+  overflow: hidden;
+  color: $white;
+  padding: 5rem 6rem 4rem 5.5rem;
+  text-align: left;
+  min-width: 300px; /* Prevent shrinking too much */
+
+  h1{
+    font-size: 2.5em;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  p{
+    color: $white-paragraph;
+    font-family: $font-secondary;
+    font-size: 1em;
+    padding-right: 2rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+  }
+}
+
+.stat-container {
+  display: flex;
+  p {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .stat:not(:last-child) {
+    margin-right: 3rem; /* Adjust the margin as needed */
+  }
+
+  .stat-value {
+    font-family: $font-primary;
+    font-weight: 700;
+    color: $white;
+    font-size: 1.5em;
+  }
+
+  .stat-text{
+    color: $white-stat-headings;
+    text-transform: uppercase;
+    font-size: 0.85em;
+  }
+}
+
+.image {
+  flex: 1;
+  background: url("/assets/images/image-header-desktop.jpg") no-repeat;
+  background-size: cover;
+  border-radius: 0 10px 10px 0;
+  overflow: hidden;
+  min-width: 600px; /* Prevent shrinking too much */
+  min-height: 10em;
+
+  .overlay {
+    background: $bg-violet;
+    height: 100%;
+  }
+  
+  .overlay-2 {
+    background: $bg-light-violet;
+    height: 100%;
+    mix-blend-mode: color-burn;
+  }
+}
+
+
+/* Mobile styles*/
+@media screen and (max-width: 625px) {
+
+  body {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  main {
+    flex-direction: column-reverse;
+    height: auto;
+    min-width: 200px;
+    margin: 10px;
+    max-width: 80%;
+  }
+
+  .content, .image {
+    border-radius: unset;
+    min-width: unset;
+  }
+  .image {
+    background: url("/assets/images/image-header-mobile.jpg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 220px; /* Explicitly control height */
+    overflow: hidden; /* Prevent internal content from increasing height */
+  }
+
+  .content {
+    width: 100%;
+    // padding: 2rem; /* Reduce padding for smaller screens */
+  }
+
+}
