@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root{
+
+// Primary Colors
+--clr-primary-700: hsl(300, 43%, 22%);
+--clr-primary-300: hsl(333, 80%, 67%);
+
+// Neutral Colors
+--clr-neutral-100: hsl(303, 10%, 53%);
+--clr-neutral-200: hsl(300, 24%, 96%);
+--clr-neutral-300: hsl(0, 0%, 100%);
+
+// Font family
+--ff-primary: "League Spartan", sans-serif;
+
+// Font size
+--fs-400: .8125rem; 
+--fs-500: .9375rem; 
+--fs-900: 2rem;
+
+// border radius
+--br: .5rem;
+
+    @media(min-width: 50em) {
+        --fs-900: 3rem; // only font-size that will change. Only can change it with css vars not Sass ones
+    }
+ 
+}
