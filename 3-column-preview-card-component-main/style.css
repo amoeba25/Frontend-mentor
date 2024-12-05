@@ -69,6 +69,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: var(--ff-primary);
+    padding-top: 30rem; /* prevent the main element from getting cut off*/
 }
 
 .container {
@@ -149,6 +150,9 @@ body {
 }
 
 @media (min-width: 50em){
+    body {
+        padding-top: 0;
+    }
     .container {
         max-width: 50rem;  
         margin: 0;
