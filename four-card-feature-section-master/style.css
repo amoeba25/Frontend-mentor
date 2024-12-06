@@ -1,0 +1,147 @@
+
+/* Css reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+}
+
+
+
+/* Variables */
+:root {
+
+    /* Font  */
+    --ff-primary: "Poppins", sans-serif;
+
+    /* Font weights */
+    --fw-light: 200;
+    --fw-normal: 400; 
+    --fw-bold: 600;
+
+    /* Font sizes */
+    --fs-400: 0.9375rem;
+    --fs-500: 1.25rem; 
+    --fs-600: 1.625rem; 
+    --fs-900: 2.5rem;  
+
+    /* Primary Colors */
+    --clr-primary-red: hsl(0, 78%, 62%);
+    --clr-primary-cyan: hsl(180, 62%, 55%);
+    --clr-primary-orange: hsl(34, 97%, 64%);
+    --clr-primary-blue: hsl(212, 86%, 64%); 
+
+    /* Neutral Colors */
+    --clr-neutral-900: hsl(234, 12%, 34%);
+    --clr-neutral-400: hsl(229, 6%, 66%);
+    --clr-neutral-100: hsl(0, 0%, 98%);
+
+}
+
+html {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-normal);
+    line-height: 1.7;
+    color: var(--clr-neutral-400);
+
+}
+
+body {
+    padding-block-end: 5rem;
+}
+
+h1,h2,h3 {
+    line-height: 1.2;
+    color: var(--clr-neutral-900);
+}
+
+.wrapper {
+    padding-inline: 2rem;
+    max-width: 1280px;
+    margin-inline: auto; /* left and right margin */
+}
+
+/* Added after the wrapper class */
+.wrapper-narrow {
+    max-width: 700px;
+}
+
+header {
+    text-align: center;
+    margin-block: 3rem;
+
+}
+
+h1 {
+    font-size: var(--fs-600);
+    font-weight: var(--fw-light);
+}
+
+@media(min-width: 800px){
+    h1 {
+        font-size: var(--fs-900);
+    }
+}
+
+h1 span {
+    font-weight: var(--fw-bold);
+}
+
+header > p {
+    font-size: var(--fs-500);
+}
+
+.layout-grid {
+    --gap: 2rem; 
+    display: grid;
+    gap: var(--gap);
+}
+
+@media(min-width: 800px){
+    .layout-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.layout-grid > * {
+    flex: 1;
+}
+
+.col {
+    display: grid;
+    gap: var(--gap);
+    align-content: center;
+}
+
+.card {
+    --br: .325rem; 
+    padding: 2rem;
+    border-top: var(--br) solid;
+    border-radius: var(--br);
+    box-shadow: 0 1rem 1.5rem -0.5rem rgb(0 50 100/ 0.15);
+}
+
+.card__title {
+    font-size: var(--fs-600);
+    margin: 0;
+}
+
+.card__img {
+    margin-top: 2rem;
+    margin-left: auto;
+}
+
+.border-cyan {
+    border-color: var(--clr-primary-cyan);
+}
+.border-red {
+    border-color: var(--clr-primary-red);
+}
+.border-blue {
+    border-color: var(--clr-primary-blue);
+}
+.border-orange {
+    border-color: var(--clr-primary-orange);
+}
