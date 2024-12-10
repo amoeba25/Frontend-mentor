@@ -1,0 +1,16 @@
+.rounded-border {
+    border-radius: var(--br);
+}
+
+.text-bold {
+    color: var(--clr-neutral-white);
+    font-weight: var( --fw-bolder);
+}
+
+.input-error {
+    border: 2px solid var(--clr-primary-red);
+    background: url('./images/icon-error.svg') no-repeat;
+    background-position: 95% center;
+    background-size: 1.5rem 1.5rem;
+
+}
