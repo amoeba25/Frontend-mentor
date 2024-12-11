@@ -1,0 +1,36 @@
+:root {
+    
+    /* Primary Colors */
+    --clr-primary-blue: hsl(223, 87%, 63%);
+
+    /* Secondary Colors */
+    --clr-secondary-pale-blue: hsl(223, 100%, 88%);
+    --clr-secondary-light-red: hsl(354, 100%, 66%);
+
+    /* Neutral Colors */
+    --clr-neutral-gray: hsl(0, 0%, 59%);
+    --clr-neutral-very-dark-blue: hsl(209, 33%, 12%);
+
+    // Font family
+    --ff-primary: "Libre Franklin", sans-serif;
+
+    // Font sizes
+    --fs-200: 0.75rem; //12px
+    --fs-300: 1rem; //16px
+    --fs-400: 1.125rem; //18px
+    --fs-500: 1.25rem; //20 px
+    --fs-600: 1.5rem; // 26px
+    --fs-900: 2.75rem;  //48 px
+
+    // Font weights
+    --fw-bold: 300; 
+    --fw-bolder: 600; 
+    --fw-boldest: 700; 
+
+    // border radius
+    --br: 2rem;
+
+    /* Spacing */
+    --spacer : 3rem; 
+
+}

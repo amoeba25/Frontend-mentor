@@ -1,0 +1,231 @@
+:root {
+  /* Primary Colors */
+  --clr-primary-blue: hsl(223, 87%, 63%);
+  /* Secondary Colors */
+  --clr-secondary-pale-blue: hsl(223, 100%, 88%);
+  --clr-secondary-light-red: hsl(354, 100%, 66%);
+  /* Neutral Colors */
+  --clr-neutral-gray: hsl(0, 0%, 59%);
+  --clr-neutral-very-dark-blue: hsl(209, 33%, 12%);
+  --ff-primary: "Libre Franklin", sans-serif;
+  --fs-200: 0.75rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-900: 2.75rem;
+  --fw-bold: 300;
+  --fw-bolder: 600;
+  --fw-boldest: 700;
+  --br: 2rem;
+  /* Spacing */
+  --spacer: 3rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+ul[class], ol[class] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-primary);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper > * + * {
+  margin-bottom: var(--spacer);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 3rem 0;
+  flex-grow: 1;
+  --bottom-spacing: 3em;
+}
+.wrapper__logo {
+  margin-bottom: var(--spacer);
+  width: 3rem;
+}
+.wrapper__content {
+  width: 100%;
+  text-align: center;
+}
+.wrapper__title {
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-gray);
+  font-size: var(--fs-600);
+  margin-bottom: 0.5em;
+}
+.wrapper__info {
+  text-align: center;
+  color: var(--clr-neutral-very-dark-blue);
+  margin-bottom: var(--bottom-spacing);
+  font-size: var(--fs-200);
+}
+.wrapper__image {
+  margin-bottom: 8em;
+}
+.wrapper__footer {
+  text-align: center;
+}
+.wrapper__footer p {
+  font-size: var(--fs-200);
+  color: var(--clr-neutral-gray);
+}
+.wrapper__socials {
+  margin-bottom: 1em;
+}
+.wrapper__socials ion-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--clr-primary-blue);
+  margin-right: 0.5em;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.form input, .form button {
+  border-radius: var(--br);
+  border: none;
+  padding-block: 1em;
+  flex-grow: 1;
+  width: 100%;
+  font-size: var(--fs-200);
+}
+.form input {
+  border: solid 1px var(--clr-secondary-pale-blue);
+  padding-left: 2em;
+}
+.form input::-moz-placeholder {
+  color: var(--clr-secondary-pale-blue);
+}
+.form input::placeholder {
+  color: var(--clr-secondary-pale-blue);
+}
+.form button {
+  cursor: pointer;
+  background-color: var(--clr-primary-blue);
+  color: #fff;
+  box-shadow: var(--clr-secondary-pale-blue) 0px 5px 10px 1px;
+}
+.form button:hover {
+  opacity: 0.8;
+}
+.form__error-message {
+  display: none;
+  color: red;
+  font-size: var(--fs-200);
+  font-style: italic;
+  text-align: center;
+}
+.form .show {
+  display: block;
+}
+.form .input-group {
+  width: 100%;
+}
+
+@media (min-width: 50em) {
+  .wrapper {
+    max-width: 40rem;
+    padding: 2rem 0 0;
+    --bottom-spacing: 2em;
+  }
+  .wrapper__logo {
+    width: auto;
+  }
+  .wrapper__title {
+    font-size: var(--fs-900);
+  }
+  .wrapper__image {
+    margin-bottom: var(--spacer);
+  }
+  .wrapper__info {
+    font-size: var(--fs-500);
+  }
+  .form {
+    align-items: flex-start;
+    gap: 5%;
+    flex-direction: row;
+  }
+  .form input, .form button {
+    border-radius: var(--br);
+    width: auto;
+    font-size: var(--fs-300);
+  }
+  .form input {
+    padding-left: 1.5em;
+    border: solid 2px var(--clr-secondary-pale-blue);
+  }
+  .form input::-moz-placeholder {
+    font-size: var(--fs-300);
+  }
+  .form input::placeholder {
+    font-size: var(--fs-300);
+  }
+  .form button {
+    flex-grow: 1;
+  }
+  .form .input-group {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: auto;
+  }
+  .form__error-message {
+    padding-left: 2em;
+    font-size: var(--fs-300);
+    text-align: left;
+  }
+}
+.text-highlight {
+  color: var(--clr-neutral-very-dark-blue);
+  font-weight: var(--fw-boldest);
+}
+
+.input-error {
+  border: 2px solid var(--clr-secondary-light-red) !important;
+}/*# sourceMappingURL=style.css.map */
