@@ -1,0 +1,36 @@
+:root {
+    
+    /* Purple Shades */
+    --clr-purple-100: hsl(254, 88%, 90%);
+    --clr-purple-500: hsl(256, 67%, 59%);
+
+    /* Yellow Shades */
+    --clr-yellow-100: hsl(31, 66%, 93%);
+    --clr-yellow-500: hsl(39, 100%, 71%);
+
+    /* Neutral Colors */
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-black: hsl(0, 0%, 7%);
+
+    // Font family
+    --ff-primary: "DM Sans", serif;
+
+    // Font sizes
+    --fs-300: 0.875rem; //14px
+    --fs-400: 1.125rem; //18px
+    --fs-500: 1.25rem; //20 px
+    --fs-550: 1.5rem; //20 px
+    --fs-600: 1.75rem; // 26px
+    --fs-800: 2.75rem; // 32px
+
+    // Font weights
+    --fw-bold: 400; 
+    --fw-bolder: 500; 
+
+    // border radius
+    --br: 0.75rem;
+
+    /* Spacing */
+    --spacer : 3rem; 
+
+}
