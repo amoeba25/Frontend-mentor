@@ -1,0 +1,37 @@
+:root {
+    
+    /* Primary Colors */
+    --clr-primary-purple: hsl(259, 100%, 65%);
+    --clr-primary-light-red: hsl(0, 100%, 67%);
+
+    /* Neutral Colors */
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --clr-neutral-off-white: hsl(0, 0%, 94%);
+    --clr-neutral-light-grey: hsl(0, 0%, 86%);
+    --clr-neutral-smokey-grey: hsl(0, 1%, 44%);
+    --clr-neutral-off-black: hsl(0, 0%, 8%);
+
+    // Font family
+    --ff-primary: "Poppins", serif;
+
+    // Font sizes
+    --fs-200: 0.5rem; //10px
+    --fs-300: 0.875rem; //14px
+    --fs-400: 1rem; //18px
+    --fs-500: 1.25rem; //20 px
+    --fs-550: 1.5rem; //20 px
+    --fs-600: 2.75rem; // 26px
+    --fs-800: 3rem; // 32px
+
+    // Font weights
+    --fw-bold: 400; 
+    --fw-bolder: 700; 
+    --fw-boldest: 800; 
+
+    // border radius
+    --br: 0.75rem;
+
+    /* Spacing */
+    --spacer : 3rem; 
+
+}

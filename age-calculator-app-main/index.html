@@ -1,13 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Age Calculator</title>
-  </head>
-  <body class="bg-lightGrey flex justify-center items-center h-screen">
-    <div id="root" class="bg-white md:w-2/5 pt-6 pb-12 px-10 rounded-2xl rounded-br-[10em]"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Age calculator app</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <form class="form">
+
+      <div class="input">
+        <div class="form__group" id="input-day">
+          <label class="form__label" for="day">day</label>
+          <input class="form__input" type="number" id="day" placeholder="DD" aria-label="day">
+          <span class="form__error" id="day-error"> </span>
+        </div>
+  
+        <div class="form__group" id="input-month">
+          <label class="form__label"  for="month">month</label>
+          <input class="form__input" type="number" id="month" placeholder="MM" aria-label="month" >
+          <span class="form__error" id="month-error"></span>
+        </div>
+  
+        <div class="form__group" id="input-year">
+          <label class="form__label" for="year">year</label>
+          <input class="form__input" type="number" id="year" placeholder="YYYY" aria-label="year" >
+          <span class="form__error" id="year-error"></span>
+        </div>
+      </div>
+
+      <button class="form__button" type="submit">
+        <img src="./assets/images/icon-arrow.svg" alt="">
+      </button>      
+    
+    </form>
+
+    <div class="display">
+      <p><span class="calculated-value" id="year-value">- -</span> years </p>
+      <p><span class="calculated-value" id="month-value">- -</span> months </p>
+      <p><span class="calculated-value" id="day-value">- -</span> days </p>
+    </div>
+  </main>
+
+<script src="scripts.js"></script>
+</body>
 </html>

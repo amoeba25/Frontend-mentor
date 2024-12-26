@@ -1,0 +1,138 @@
+body {
+    min-height: 100vh;
+    font-family: var(--ff-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #efefef;
+}
+
+main {
+    background-color: var(--clr-neutral-white); 
+    padding: 2rem 1rem; 
+    border-radius: 1em 1em 8em 1em;
+}
+
+.form {
+
+    position: relative;
+    .input {
+        display: flex;
+        gap: 1.125em;
+        padding-right: 2em;
+        padding-bottom: 2em;
+        border-bottom: 1px solid var(--clr-neutral-light-grey);
+    }
+
+    &__label {
+        display: block;
+        text-transform: uppercase;
+        font-size: var(--fs-200);
+        font-weight: var(--fw-bolder); 
+        color: var(--clr-neutral-smokey-grey);
+        letter-spacing: 3px;
+        padding-bottom: 3px;
+    }
+
+    &__input {
+        max-width: 4em;
+        border: 1px solid var(--clr-neutral-off-white);
+        border-radius: 5px;
+        padding: 0.625em;
+        font-weight: var(--fw-bolder);
+        color: var(--clr-neutral-off-black);
+    }
+
+    &__input::placeholder {
+        font-weight: var(--fw-bolder);
+    }
+
+    &__input:focus {
+        border: black 1px solid;
+    }
+
+    &__error {
+        color: var(--clr-primary-light-red);
+        font-size: var(-fs-300);
+        margin-top: 4px;
+        display: none;
+        font-size: var(--fs-200);
+    }
+
+    &__button {
+        position: absolute;
+        bottom: -25px;
+        right: 45%;
+        background-color: var(--clr-primary-purple);
+        border: none;
+        padding: 1em;
+        overflow: hidden; /* Ensures the image is clipped to the circle */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10em;
+        
+        img {
+            height: 15px;
+            width: 15px;
+        }
+       
+    }
+
+    &__button:hover {
+        cursor: pointer;
+        background-color: var(--clr-neutral-off-black);
+    }
+
+}
+
+.display {
+    padding-top: 2em;
+    line-height: 1.2;
+
+    p {
+        font-size: var(--fs-600);
+        font-weight: var(--fw-boldest);
+        font-style: italic;
+    }
+
+    .calculated-value {
+        color: var(--clr-primary-purple);
+    }
+}
+
+
+@media(min-width: 50em) {
+
+    main {
+        max-width: 50rem;
+        padding: 2rem;
+    }
+
+    .form {
+        .input {
+            padding-right: 8em;
+        }
+
+        &__input {
+            max-width: 6em;
+        }
+        
+        &__button {
+            right: 0;
+            bottom: -30px;
+           
+            img {
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+
+    .display {
+        p {
+            font-size: var(--fs-800);
+        }
+    }
+
+}
